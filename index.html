@@ -323,6 +323,16 @@
                         </ul>
                     </address>
             </div>
+            <form class="subscribe" name="subscribe">
+                    <label class="subscribe-label">Subscribe</label>
+                <div class="subscribe-flex">
+                    <input class="subscribe-input" type="email" name="user_mail" placeholder="E-mail">
+                    <button class="subscribe-button" type="submit">Subscribe 
+                        <svg class="subscribe-icon">
+                        <use href="./images/icons.svg#icon-iconsend"></use>
+                    </svg></button>
+                </div>
+            </form>
         </div>
 
     </footer>
@@ -334,6 +344,44 @@
               <use href="./images/icons.svg#icon-icon-close"></use>
             </svg>
           </button>
+            <form class="regisrtation-form" name="regisrtation-form">
+                <strong class="modal-title" id="modal-information">Leave your contacts and we will call you back</strong>
+                    <div class="regisrtation-form-group" role="group" aria-labelledby="modal-information">
+                            <label class="regisrtation-form-field">
+                                <span class="regisrtation-form-label">Name</span>
+                                <input class="regisrtation-form-input" type="text" name="user_name">
+                                <svg class="regisrtation-form-icon">
+                                    <use href="./images/icons.svg#icon-person"></use>
+                                </svg>
+                            </label>
+                            <label class="regisrtation-form-field">
+                                <span class="regisrtation-form-label">Phone</span>
+                                <input class="regisrtation-form-input" type="phone" name="user_phone">
+                                <svg class="regisrtation-form-icon">
+                                    <use href="./images/icons.svg#icon-phone"></use>
+                                </svg>
+                            </label>
+                            <label class="regisrtation-form-field">
+                                <span class="regisrtation-form-label">Email</span>
+                                <input class="regisrtation-form-input" type="email" name="user_email">
+                                <svg class="regisrtation-form-icon">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                            </label>
+                            <label>
+                            <span class="regisrtation-form-label">Comment</span>
+                            <textarea class="regisrtation-form-message" name="user_message" rows="7" placeholder="Text input"></textarea>
+                            </label>
+                            <label class="regisrtation-form-agreement">
+                                <input class="regisrtation-form-checkbox" name="user-agreement" type="checkbox">
+                                    <svg class="regisrtation-form-check">
+                                        <use class="check" href="./images/icons.svg#icon-check"></use>
+                                    </svg>
+                                    <span class="regisrtation-form-text">I accept the terms and conditions of the <a class="regisrtation-form-link" href="">Privacy Policy</a></span>
+                            </label>
+                    </div>
+                    <button class="submit-btn" type="submit">Send</button>
+            </form>
         </div>
       </div>
   

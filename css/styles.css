@@ -90,6 +90,7 @@ body {
 }
 
 .header-nav-link {
+    display: block;
     position: relative;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -115,8 +116,8 @@ body {
 
 .header-nav-link.current::after {
     position: absolute;
-    content: "";
-    bottom:-4px;
+    content:"";
+    bottom:-1px;
     left: 0;
     width: 100%;
     height: 4px;
@@ -135,6 +136,7 @@ body {
 }
 
 .contacts-link {
+    display: block;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
@@ -446,6 +448,7 @@ background-color: #FFFFFF;
 
 .social {
     margin-left: 120px;
+    margin-right: 80px;
 }
 
 .social-title {
@@ -649,8 +652,8 @@ background-color: #FFFFFF;
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 408px;
-    height: 567px;
+    min-width: 408px;
+    min-height: 584px;
     background-color: #FCFCFC;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.14), 0 1px 3px rgba(0, 0, 0, 0.12), 0 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -672,6 +675,14 @@ background-color: #FFFFFF;
     background: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    transition-property: fill, background-color;
+    transition-duration: var(--tr-duration);
+    transition-timing-function: var(--tr-tm-func);
+}
+
+.button-modal:focus {
+    fill: #FFFFFF;
+    background-color: #404BBF;
 }
 
 .icon-modal {
@@ -679,4 +690,216 @@ background-color: #FFFFFF;
     height: 8px;
 }
 
+.regisrtation-form {
+    padding: 24px;
+    margin-top: 48px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    text-align: left;
+}
 
+.modal-title {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: var(--title-text-color);
+    margin-bottom: 14px;
+}
+
+.regisrtation-form-field {
+    position: relative;
+    display: block;
+}
+
+.regisrtation-form-label {
+    margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #8E8F99;
+}
+
+.regisrtation-form-input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 38px;
+    padding-right: 38px;
+    margin-bottom: 8px;
+    outline: transparent;
+    transition: border var(--tr-duration);
+}
+
+.regisrtation-form-icon {
+    position: absolute;
+    display: block;
+    bottom: 16px;
+    left: 19px;
+    width: 18px;
+    height: 24px;
+    fill: currentColor;
+    transition: fill var(--tr-duration);
+}
+
+.regisrtation-form-input:focus,.regisrtation-form-message:focus {
+    border: 1px solid #4D5AE5;
+}
+
+.regisrtation-form-input:focus + .regisrtation-form-icon{
+    color: var(--accent-color);
+}
+
+.regisrtation-form-message {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border var(--tr-duration);
+    padding: 8px 16px;
+}
+
+.regisrtation-form-text {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: #757575;
+    user-select: none;
+}
+
+.regisrtation-form-link {
+    color: var(--accent-color);
+}
+
+.regisrtation-form-agreement {
+    display: flex;
+    align-items: left;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+
+.regisrtation-form-checkbox {
+    position: relative;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+}
+
+.regisrtation-form-check {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    opacity: 0;
+    transition: opacity var(--tr-duration) var(--tr-tm-func);
+}
+
+.regisrtation-form-checkbox:checked+.regisrtation-form-check {
+    opacity: 1;
+}
+
+.submit-btn {
+    display: block;
+    width: 169px;
+    height: 56px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background: var(--accent-color);
+    color: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition-property: background-color, box-shadow;
+    transition-duration: var(--tr-duration);
+    transition-timing-function: var(--tr-tm-func);
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #404BBF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.regisrtation-form-message::placeholder {
+    color: rgba(117, 117, 117, 0.5);
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+}
+
+.subscribe-flex {
+    display: flex;
+}
+
+.subscribe-label {
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+}
+
+.subscribe-input {
+    width: 264px;
+    height: 40px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    margin-right: 24px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-input::placeholder {
+    font-size: 12px;
+    line-height: 2.0;
+    letter-spacing: 0.04em;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe-button {
+    display: flex;
+    min-width: 165px;
+    height: 40px;
+    padding: 8px 24px;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background-color: var(--accent-color);
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    transition-duration: var(--tr-duration);
+    transition-timing-function: var(--tr-tm-func);
+}
+
+.subscribe-icon {
+    margin-left:16px;
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+}
+
+.subscribe-button:hover,
+.subscribe-button:focus {
+    background-color: #404BBF;
+    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
