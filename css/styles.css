@@ -395,7 +395,7 @@ background-color: #FFFFFF;
     border: 1px solid;
     border-color:#8E8F99;
     cursor: pointer;
-    transition-property: color;
+    transition-property: fill, border-color;
     transition-duration: var(--tr-duration);
     transition-timing-function: var(--tr-tm-func);
 }
@@ -659,6 +659,7 @@ background-color: #FFFFFF;
     border-radius: 4px;
     transform: translate(-50%, -50%);
     transition: transform var(--tr-duration) var(--tr-tm-func);
+    padding-top: 48px;
 }
 
 .button-modal {
@@ -692,7 +693,6 @@ background-color: #FFFFFF;
 
 .regisrtation-form {
     padding: 24px;
-    margin-top: 48px;
     margin-right: auto;
     margin-left: auto;
     width: 100%;
@@ -728,12 +728,16 @@ background-color: #FFFFFF;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
     background-color: transparent;
     padding-left: 38px;
     padding-right: 38px;
     margin-bottom: 8px;
     outline: transparent;
     transition: border var(--tr-duration);
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .regisrtation-form-icon {
@@ -743,7 +747,7 @@ background-color: #FFFFFF;
     left: 19px;
     width: 18px;
     height: 24px;
-    fill: currentColor;
+    fill: var(--title-text-color);
     transition: fill var(--tr-duration);
 }
 
@@ -759,12 +763,16 @@ background-color: #FFFFFF;
     width: 100%;
     height: 120px;
     margin-bottom: 16px;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     background-color: transparent;
     outline: transparent;
     transition: border var(--tr-duration);
     padding: 8px 16px;
+    color: rgba(117, 117, 117, 0.5);
 }
 
 .regisrtation-form-text {
@@ -858,11 +866,20 @@ background-color: #FFFFFF;
     height: 40px;
     padding: 8px 16px;
     background-color: transparent;
+    font-size: 12px;
+    line-height: 2.0;
+    letter-spacing: 0.04em;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     margin-right: 24px;
     color: rgba(255, 255, 255, 0.6);
+    outline: transparent;
+}
+
+.subscribe-input:focus {
+    border: 1px solid #4D5AE5;
+    outline-offset: 1px;
 }
 
 .subscribe-input::placeholder {
