@@ -879,7 +879,6 @@ background-color: #FFFFFF;
 
 .subscribe-input:focus {
     border: 1px solid #4D5AE5;
-    outline-offset: 1px;
 }
 
 .subscribe-input::placeholder {
